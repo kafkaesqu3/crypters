@@ -122,6 +122,15 @@ namespace PayloadEncrypt
 
             File.WriteAllBytes(args[0] + ".encrypted", cipher);
             Console.WriteLine("Wrote encoded binary {0}.encrypted", args[0]);
+            Console.Write("Here are the first 10 bytes of the cleartext (for verification purposes): ");
+            int i = 0;
+            while (i < 10)
+            {
+                Console.Write("{0:X}, ", shellcodeBytes[i]);
+                i += 1;
+            }
+            Console.WriteLine("");
+            
 
 
         }

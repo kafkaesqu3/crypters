@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Crypter2.cpp">
+    <ClCompile Include="Crypter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
