@@ -63,7 +63,7 @@ namespace PayloadEncrypt
 
         static byte[] CallAesDecryptData(byte[] ciphertext, string key)
         {
-            char[] iv = @"9/\~V).A,lY&=t2b".ToCharArray();
+            char[] iv = @"6cc40fb494d35bf1".ToCharArray();
             byte[] ret = AESDecryptData(ciphertext, Encoding.ASCII.GetBytes(key.ToCharArray()), Encoding.ASCII.GetBytes(iv));
             return ret;
         }
@@ -110,8 +110,8 @@ namespace PayloadEncrypt
             byte[] shellcodeBytes = File.ReadAllBytes(args[0]);
             // This is the encryption key. If changed, must also be changed in the
             // project that runs the shellcode.
-            char[] password = "AD.ZIOPTISLABS.COM".ToCharArray();
-            char[] iv = @"9/\~V).A,lY&=t2b".ToCharArray();
+            char[] password = @"ad.allstate.com".ToCharArray();
+            char[] iv = @"6cc40fb494d35bf1".ToCharArray();
 
             byte[] bPwd = Encoding.ASCII.GetBytes(password);
             byte[] biv = Encoding.ASCII.GetBytes(iv);
@@ -122,11 +122,12 @@ namespace PayloadEncrypt
 
             File.WriteAllBytes(args[0] + ".encrypted", cipher);
             Console.WriteLine("Wrote encoded binary {0}.encrypted", args[0]);
+            byte[] decrypted = CallAesDecryptData(cipher, "ad.allstate.com");
             Console.Write("Here are the first 10 bytes of the cleartext (for verification purposes): ");
             int i = 0;
             while (i < 10)
             {
-                Console.Write("{0:X}, ", shellcodeBytes[i]);
+                Console.Write("{0:X}, ", decrypted[i]);
                 i += 1;
             }
             Console.WriteLine("");

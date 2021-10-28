@@ -4,6 +4,6 @@
     <StartArguments>Z:\submarine_loader\TESTSERVER-agent-3-062921-210239370534.exe</StartArguments>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
-    <StartArguments>Z:\submarine_loader\agent-2-062821-223917777088.exe</StartArguments>
+    <StartArguments>Z:\implants\agent10\nc-agent10-confused.exe</StartArguments>
   </PropertyGroup>
 </Project>
