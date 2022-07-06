@@ -4,6 +4,6 @@
     <StartArguments>Z:\submarine_loader\TESTSERVER-agent-3-062921-210239370534.exe</StartArguments>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
-    <StartArguments>Z:\implants\agent10\nc-agent10-confused.exe</StartArguments>
+    <StartArguments>dec b77a5c561934e089 C:\users\david\merovingian.log.txt</StartArguments>
   </PropertyGroup>
 </Project>
